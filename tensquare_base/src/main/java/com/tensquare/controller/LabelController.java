@@ -1,5 +1,6 @@
 package com.tensquare.controller;
 
+import com.tensquare.pojo.Label;
 import com.tensquare.service.LabelService;
 import controller.BaseController;
 import exception.BizException;
@@ -18,10 +19,10 @@ import java.util.Optional;
 @RestController
 public class LabelController extends BaseController {
     @Autowired
-    private LabelService  labelService;
+    private LabelService labelService;
 
     @PostMapping("/label")
-    public Object homeStay(ParamObject params) {
+    public Object homeStay(ParamObject params, Label label) {
         boolean o = false;
         Object result = null;
         try {
@@ -32,17 +33,21 @@ public class LabelController extends BaseController {
                 case "1":
                     result=labelService.findAllLabel();
                     break;
-                //创建民宿订单功能
+                //根据ID查询标签
                 case "2":
+                    result=labelService.selectByPrimaryKey(params.getParam1());
                     break;
-                //取消民宿订单
+                //增加标签
                 case "3":
+                    result=labelService.insertSelective(label);
                     break;
-                //民宿订单评价
+                //修改标签
                 case "4":
+                    result=labelService.updateByPrimaryKeySelective(label);
                     break;
-                //立即支付按钮(回显数据)
+                //删除标签
                 case "5":
+                    result=labelService.deleteByPrimaryKey(params.getParam1());
                     break;
                 case "6":
                     break;

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @Author:wzp
- * @Date:Created in 9:18 PM 2019/5/16
+ * @Date:Created in 2:55 PM 2019/5/18
  * @Description:
  */
 @Mapper
@@ -24,7 +24,9 @@ public interface LabelDao {
 
     int updateByPrimaryKey(Label record);
 
-
+    /**
+     * 查询所有标签
+     * @return List<Label>
+     */
     List<Label> findAllLabel();
-
 }

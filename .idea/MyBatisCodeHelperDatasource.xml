@@ -26,12 +26,26 @@
         <option name="addSerializeUid" value="true" />
         <option name="generateService" value="true" />
         <option name="javaMapperPackage" value="com.tensquare.dao" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/tensquare_base/src/main/java" />
         <option name="javaModelPackage" value="com.tensquare.pojo" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="tensquare_parent" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/tensquare_base/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="tensquare_base" />
         <option name="moduleNameToPackageAndPathMap">
           <map>
+            <entry key="tensquare_base">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.tensquare.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/tensquare_base/src/main/java" />
+                  <option name="javaModelPacakge" value="com.tensquare.pojo" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/tensquare_base/src/main/java" />
+                  <option name="javaServicePackage" value="com.tensquare.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/tensquare_base/src/main/java" />
+                  <option name="xmlPackage" value="com.tensquare.mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/tensquare_base/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
             <entry key="tensquare_parent">
               <value>
                 <UserPackageAndPathInfoByModule>
@@ -55,8 +69,8 @@
               <value>
                 <TableGenerateConfig>
                   <option name="generatedKey" value="" />
-                  <option name="javaModelName" value="TbLabel" />
-                  <option name="moduleName" value="tensquare_parent" />
+                  <option name="javaModelName" value="Label" />
+                  <option name="moduleName" value="tensquare_base" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
               </value>
@@ -65,7 +79,7 @@
         </option>
         <option name="useLomBokOnModel" value="true" />
         <option name="xmlMapperPackage" value="com.tensquare.mapper" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/tensquare_base/src/main/resources" />
       </ProjectProfile>
     </option>
   </component>

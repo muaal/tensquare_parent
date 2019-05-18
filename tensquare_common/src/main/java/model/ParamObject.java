@@ -1,6 +1,7 @@
 package model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ import java.util.Map;
  * Date: 2019-01-29
  * Time: 14:16
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class ParamObject extends BaseQuery {
 

@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.tensquare.pojo.Label">
     <!--@mbg.generated-->
     <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="labelName" jdbcType="VARCHAR" property="labelName" />
+    <result column="label_name" jdbcType="VARCHAR" property="labelName" />
     <result column="state" jdbcType="VARCHAR" property="state" />
     <result column="count" jdbcType="BIGINT" property="count" />
     <result column="recommend" jdbcType="VARCHAR" property="recommend" />
@@ -12,7 +12,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, labelName, `state`, `count`, recommend, fans
+    id, label_name, `state`, `count`, recommend, fans
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
@@ -28,10 +28,10 @@
   </delete>
   <insert id="insert" parameterType="com.tensquare.pojo.Label">
     <!--@mbg.generated-->
-    insert into tb_label (id, labelName, `state`,
+    insert into tb_label (id, label_name, `state`, 
       `count`, recommend, fans
       )
-    values (#{id,jdbcType=VARCHAR}, #{labelname,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=VARCHAR}, #{labelName,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
       #{count,jdbcType=BIGINT}, #{recommend,jdbcType=VARCHAR}, #{fans,jdbcType=BIGINT}
       )
   </insert>
@@ -43,7 +43,7 @@
         id,
       </if>
       <if test="labelName != null">
-        labelName,
+        label_name,
       </if>
       <if test="state != null">
         `state`,
@@ -62,8 +62,8 @@
       <if test="id != null">
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="labelname != null">
-        #{labelname,jdbcType=VARCHAR},
+      <if test="labelName != null">
+        #{labelName,jdbcType=VARCHAR},
       </if>
       <if test="state != null">
         #{state,jdbcType=VARCHAR},
@@ -83,8 +83,8 @@
     <!--@mbg.generated-->
     update tb_label
     <set>
-      <if test="labelname != null">
-        labelName = #{labelname,jdbcType=VARCHAR},
+      <if test="labelName != null">
+        label_name = #{labelName,jdbcType=VARCHAR},
       </if>
       <if test="state != null">
         `state` = #{state,jdbcType=VARCHAR},
@@ -104,7 +104,7 @@
   <update id="updateByPrimaryKey" parameterType="com.tensquare.pojo.Label">
     <!--@mbg.generated-->
     update tb_label
-    set labelName = #{labelname,jdbcType=VARCHAR},
+    set label_name = #{labelName,jdbcType=VARCHAR},
       `state` = #{state,jdbcType=VARCHAR},
       `count` = #{count,jdbcType=BIGINT},
       recommend = #{recommend,jdbcType=VARCHAR},
@@ -112,6 +112,6 @@
     where id = #{id,jdbcType=VARCHAR}
   </update>
   <select id="findAllLabel" resultMap="BaseResultMap">
-    select * from tb_label
+    select * from tb_label;
   </select>
 </mapper>
